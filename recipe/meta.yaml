@@ -10,11 +10,14 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   host:
     - python
+    - pip
+    - wheel
     - setuptools
     - click >=4.0
   run:
@@ -25,11 +28,17 @@ test:
   imports:
     - cligj
 
+   commands:
+    - pip check
+
 about:
   home: https://github.com/mapbox/cligj
   license: BSD 3-Clause
+  license_family: BSD
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: 'Click params for commmand line interfaces to GeoJSON.'
+  dev_url: https://github.com/mapbox/cligj
+  doc_url: https://github.com/mapbox/cligj/blob/master/README.rst
 
 extra:
   recipe-maintainers:
