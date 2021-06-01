@@ -27,7 +27,6 @@ requirements:
 test:
   imports:
     - cligj
-
    commands:
     - pip check
 
