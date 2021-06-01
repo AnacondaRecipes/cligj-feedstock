@@ -27,8 +27,6 @@ requirements:
 test:
   imports:
     - cligj
-   commands:
-    - pip check
 
 about:
   home: https://github.com/mapbox/cligj
